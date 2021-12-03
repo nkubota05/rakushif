@@ -12,10 +12,11 @@
 
 - has_many :notifications
 
-## destinations テーブル
+## notifications テーブル
 
 | Column           | Type       | Options                        |
 | ---------------- | ---------- | ------------------------------ |
+| Application date | string     | null: false                    |
 | user             | references | null: false, foreign_key: true |
 | date_id          | integer    | null: false, foreign_key: true |
 | choose_id        | integer    | null: false, foreign_key: true |
