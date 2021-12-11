@@ -5,30 +5,30 @@
       <%= render "devise/shared/links"%>
     </div>
     <div class='account-page__inner--right user-form'>
-    <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
-      <div class="field">
-        <div class='field-label'>
-          <%= f.label :登録番号 %>
+      <%= form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f| %>
+        <div class="field">
+          <div class='field-label'>
+            <%= f.label :登録番号 %>
+          </div>
+          <div class='field-input'>
+            <%= f.text_field :number, autofocus: true %>
+          </div>
         </div>
-        <div class='field-input'>
-          <%= f.text_field :number, autofocus: true %>
-        </div>
-      </div>
 
-      <div class="field">
-        <div class='field-label'>
-          <%= f.label :パスワード %>
-          <i>(英数字6文字以上)</i>
+        <div class="field">
+          <div class='field-label'>
+            <%= f.label :パスワード %>
+            <i>(英数字6文字以上)</i>
+          </div>
+          <div class='field-input'>
+            <%= f.password_field :password, autocomplete: "off" %>
+          </div>
         </div>
-        <div class='field-input'>
-          <%= f.password_field :password, autocomplete: "off" %>
-        </div>
-      </div>
 
-      <div class="actions">
-        <%= f.submit "ログイン", class: 'btn'%>
-      </div>
-    <% end %>
+        <div class="actions">
+          <%= f.submit "ログイン", class: 'btn'%>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
-
